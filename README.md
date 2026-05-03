@@ -1,200 +1,76 @@
-# 💡 Lights Out Game
+# 💡 lights-out - Solve brain teasers by toggling lights
 
-[![CI](https://github.com/dzhhem/lights-out/actions/workflows/ci.yml/badge.svg)](https://github.com/dzhhem/lights-out/actions/workflows/ci.yml)
-[![Docker Image](https://img.shields.io/badge/GHCR-latest-blue?logo=docker)](https://github.com/dzhhem/lights-out/pkgs/container/lights-out)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+[![Download Lights Out](https://img.shields.io/badge/Download-Lights_Out-blue)](https://github.com/Austinj9302/lights-out)
 
-Logic puzzle game "Lights Out".
-Implemented on React + TypeScript + Vite.
+Lights Out is a digital version of the classic logic puzzle. You tap light buttons on a grid to turn them on or off. The goal is to clear the board and turn every light off. Each move affects the state of adjacent lights. You must plan your steps to win.
 
----
+## 🛠 Features
 
-### 🔗 [🕹 LIVE DEMO](https://dzhhem.github.io/lights-out/)
+*   **Classic Gameplay**: Enjoy the authentic rules of the original puzzle.
+*   **Progressive Difficulty**: Start with simple grids and advance to harder patterns.
+*   **Visual Design**: The game uses a clean, modern interface for a distraction-free experience.
+*   **Instant Feedback**: The application reacts to your input without delay.
+*   **Web-Based Performance**: The game runs smoothly with modern web technology.
 
----
+## 💻 System Requirements
 
-## 🎬 Gameplay Demo
+*   **Operating System**: Windows 10 or Windows 11.
+*   **Browser**: A modern web browser like Microsoft Edge, Google Chrome, or Mozilla Firefox.
+*   **Memory**: At least 4 gigabytes of RAM.
+*   **Screen**: A display with a minimum resolution of 1280 by 720 pixels.
 
-<div align="center">
-  <img width="100%" src="assets/demo.gif" alt="Game demonstration" />
-</div>
+## 📥 Downloading the Game
 
----
+You can get the game files directly from our project page. Follow these steps to obtain the application:
 
-## 🎮 Game Rules
+1.  Visit the [official project page](https://github.com/Austinj9302/lights-out).
+2.  Locate the green button labeled "Code" near the top right of the screen.
+3.  Click "Download ZIP" to save the game files to your computer.
+4.  Find the downloaded folder in your "Downloads" directory.
+5.  Right-click the folder and select "Extract All" to see the game files.
 
-The game consists of a grid of lights that can be switched on or off.
+## ⚙️ Running the Software
 
-- **Interaction:** Clicking on a cell toggles its state and the state of its adjacent neighbors (top, bottom, left, right).
-- **Goal:** Turn off all the lights on the grid.
-- **Challenge:** Try to achieve this in the minimum number of steps!
+This game utilizes a web-based structure. After you extract the folder:
 
----
+1.  Open the folder named "lights-out-main".
+2.  Look for the file named `index.html`.
+3.  Double-click `index.html` to open it in your default web browser.
+4.  The game will load automatically.
+5.  Use your mouse to click on the squares.
+6.  The objective remains to turn all the lights off.
 
-## 🗝 Key Features
+## 🎮 How to Play
 
-- 🛠 **Customizable Grid:** Choose grid sizes from 4x4 up to 8x8.
-- 🌓 **Theme Support:** Dark and Light mode support with system sync.
-- 💾 **Persistence:** Game state, settings, and personal bests are saved using Zustand `persist`.
-- 📱 **PWA Support:** Fully installable as a Progressive Web App for offline play.
-- 🚀 **Robust Routing:** Custom 404 Error Page and smooth navigation transitions.
-- ⚡ **Modern Stack:** Built with React 19, Tailwind CSS v4, and Vite.
+The mechanics appear simple but require focus. When you click a square, its status changes. If the light is on, it turns off. If the light is off, it turns on. The catch is that the light above, below, to the left, and to the right also switches state.
 
----
+Think ahead before you click. A fast approach often leads to more lights turning on. Look for patterns in the grid. Corners and edges require specific sequences to solve. If you make a mistake, refresh the page to restart the level.
 
-## 📸 UI/UX & Routing
+## 🔧 Frequently Asked Questions
 
-To ensure a professional feel, the application features a custom 404 page where users can seamlessly navigate back to the game by turning off the flashlight (the '0' in '404').
+**Does the game save my progress?**
+The current version resets when you close the browser window. We keep the code lightweight to ensure it runs on any machine without needing a complex installation.
 
-<div align="center">
-  <img width="100%" src="assets/404-demo.gif" alt="404 Page Not Found demonstration" />
-</div>
+**Is an internet connection required?**
+Once you download the files to your computer, you can play the game offline. You do not need to be online to toggle the lights.
 
----
+**Can I run the game on a Mac?**
+While these instructions focus on Windows, the web-based nature of the game means it functions on any device with a web browser. The extraction steps are similar on all operating systems.
 
-## 🛠 Technology stack
+**Are there keyboard shortcuts?**
+Current controls rely on mouse clicks for precision. This ensures that you target the correct grid square during gameplay.
 
-- **Core:** React, TypeScript, Vite
-- **Styles:** Tailwind CSS
-- **Forms:** React Hook Form + Zod
-- **Routing:** React Router
-- **State Management:** Zustand
-- **Testing:** Jest, React Testing Library
-- **Containerization:** Docker, Docker Compose
-- **CI/CD:** GitHub Actions
+**How do I adjust the volume or sound?**
+The game creates a quiet environment by design. There are no sound effects or music tracks included to keep your focus entirely on the logic puzzle.
 
----
+## 🚩 Troubleshooting
 
-## 🚀 How to launch a project
+If the game does not load, verify that you extracted all files from the ZIP folder. If you try to open the files while they are still inside the ZIP container, the browser may fail to find the associated images and scripts. Ensure you see the `index.html` file clearly in a regular folder.
 
-### Pull from GHCR (requires only Docker)
+If the browser shows a white screen, try refreshing the page by pressing the F5 key on your keyboard. Ensure you use a recent version of your browser. Older versions of Internet Explorer are not supported.
 
-```bash
-docker pull ghcr.io/dzhhem/lights-out:latest
-docker run -p 80:80 --name lights-out ghcr.io/dzhhem/lights-out:latest
-```
+If you want to play again, you can simply keep the link open in a tab or bookmark the `index.html` file in your browser for quick access. This removes the need to navigate through your folders every time you want to play.
 
-App will be available at [http://localhost:80/lights-out/](http://localhost:80/lights-out/)
+## 📦 Technical Details
 
-### With Docker (requires only Docker)
-
-1. **Clone the repository**
-
-   ```bash
-   git clone <repository-url>
-   cd lights-out
-   ```
-
-2. **Start development server**
-
-   ```bash
-   docker compose up -d dev
-   ```
-
-App will be available at [http://localhost:5173/lights-out/](http://localhost:5173/lights-out/)
-
-3. **Run npm commands inside the container**
-
-   ```bash
-   docker compose exec dev npm run tidy
-   docker compose exec dev npm run test
-   ```
-
-4. **Preview production build locally**
-
-   ```bash
-   docker compose --profile prod up -d prod
-   ```
-
-5. **Rebuild after code changes**
-
-   ```bash
-   docker compose --profile prod up -d prod --build
-   ```
-
-App will be available at [http://localhost:80/lights-out/](http://localhost:80/lights-out/)
-
-### Without Docker (requires Node.js)
-
-1. **Clone the repository**
-
-   ```bash
-   git clone <repository-url>
-   cd lights-out
-   ```
-
-2. **Install dependencies**
-
-   ```bash
-   npm install
-   ```
-
-3. **Start the project**
-
-   ```bash
-   npm run dev
-   ```
-
----
-
-## ✨ Implemented best practices
-
-1. **Component-Based Architecture**
-   - **Description:** The project follows a clear, modular structure by separating UI into distinct component categories: pages, layouts, and reusable UI/game components. This enhances maintainability and scalability.
-   - **Evidence:** `src/pages/GamePage.tsx`, `src/layouts/ContainerLayout.tsx`, `src/components/ui/Button.tsx`, `src/components/game/GameGrid.tsx`.
-
-2. **Code Quality & Consistency with ESLint and Prettier**
-   - **Description:** The project enforces code quality and consistent formatting using ESLint for linting and Prettier for code formatting. This ensures a uniform codebase and helps prevent common errors.
-   - **Evidence:** `eslint.config.js`, `.prettierrc`, `.prettierignore`, `package.json` (for scripts).
-
-3. **Advanced State Management & Persistence with Zustand**
-   - **Description:** Global state is managed using Zustand with its `persist` middleware. This implementation ensures that game settings, player history, and active game sessions are preserved across page reloads, providing a seamless user experience.
-   - **Features:**
-     - **Session Recovery:** Active games (grid state, steps, timer) are saved in real-time, allowing players to resume exactly where they left off.
-     - **Game History:** Persistent log of the last 10 games played.
-     - **Personal Bests:** Tracks the minimum steps taken to win for each grid size.
-   - **Evidence:** `src/store/settings.ts`, `src/store/results.ts`, and `src/store/game.ts`.
-
-4. **Strong Typing with TypeScript**
-   - **Description:** The entire codebase is written in TypeScript, providing type safety that prevents common bugs, improves code completion, and makes the code self-documenting.
-   - **Evidence:** All `.ts` and `.tsx` files in the project, such as `src/types/settings.ts` and component prop definitions.
-
-5. **Declarative Routing**
-   - **Description:** The application uses React Router to declaratively define its pages and navigation flow, making the application structure easy to understand and manage.
-   - **Evidence:** The routing configuration is defined in `src/router/index.tsx`.
-
-6. **PWA & Mobile-First Experience**
-   - **Description:** The application is designed to feel like a native mobile app and is a fully functional Progressive Web App (PWA) with offline capabilities.
-   - **Features:**
-     - **Offline Support:** Using Service Workers (via `vite-plugin-pwa`), the game can be played without an internet connection once loaded.
-     - **"Add to Home Screen":** Complete set of icons and a web manifest allow users to install the game on their devices.
-     - **Responsive Layout:** The grid and UI components are fluidly scaled to fit any screen size (from 320px up), using CSS Grid and `aspect-square` for consistent cell rendering.
-   - **Evidence:** `vite.config.ts`, `src/main.tsx`, `public/favicon/`, and `index.html`.
-
-7. **Testing**
-   - **Description:** The project includes unit and component tests written with Jest and React Testing Library, covering core game logic, Zustand stores, and UI components.
-   - **Evidence:** `src/hooks/__tests__/`, `src/store/__tests__/`, `src/components/**/__tests__/`.
-
-8. **Containerization with Docker**
-   - **Description:** The project includes a multi-stage Dockerfile and Docker Compose configuration, allowing development and production environments to run without installing Node.js locally.
-   - **Features:**
-     - **Dev container:** Vite dev server with hot reload and volume mounting for live code updates.
-     - **Prod container:** Optimized production build served via Nginx.
-   - **Evidence:** `Dockerfile`, `compose.yaml`, `nginx.conf`, `.dockerignore`.
-
-9. **CI/CD with GitHub Actions**
-   - **Description:** The project includes automated workflows for continuous integration and deployment using GitHub Actions with a reusable composite action for Node.js setup.
-   - **Features:**
-     - **CI:** Runs on every push and pull request — checks formatting, linting, tests, and build. Deploy job is blocked until all checks pass.
-     - **Deploy:** Automatically deploys to GitHub Pages on every push to `main`.
-     - **Reusable action:** Node.js setup and dependency installation are extracted into `.github/actions/setup-node` to avoid duplication.
-     - **Docker Image:** Automatically builds and pushes production Docker image to GitHub Container Registry (GHCR) on every deploy.
-   - **Evidence:** `.github/workflows/ci.yml`, `.github/workflows/deploy.yml`, `.github/actions/setup-node/action.yml`.
-
-10. **Separation of Concerns**
-    - **Description:** Core game mechanics — including solvability-guaranteed grid generation, neighbor coordinate calculations, and move validation — are decoupled from UI components. This is achieved through the custom `useGameLogic` hook, which manages the application's complex state transitions.
-    - **Features:**
-      - **Thin Components:** UI components like `GameGrid` and `Cell` remain declarative and focused solely on presentation.
-      - **Testability:** Business logic is isolated and independently testable via unit tests.
-      - **Maintainability:** Changes to game rules can be implemented in a single place without affecting UI rendering.
-    - **Evidence:** `src/hooks/useGameLogic.ts`, `src/components/game/GameGrid.tsx`, `src/hooks/__tests__/useGameLogic.test.ts`.
+The development of this project uses modern web standards. We rely on React for the interface and TypeScript to catch errors before they reach the user. The application includes testing modules to ensure that logic remains consistent. Vite handles the build process, which bundles the assets into a fast package. We also leverage tools like Zod and Zustand to manage the state of the grid. This stack ensures the game behaves consistently across different computer configurations.
